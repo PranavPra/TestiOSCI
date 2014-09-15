@@ -10,14 +10,14 @@ import UIKit
 
 class WebViewController: UIViewController, UIWebViewDelegate {
     
-    @IBOutlet var webView : UIWebView
+    @IBOutlet var webView : UIWebView?
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         // Custom initialization
     }
     
-    init(coder aDecoder: NSCoder!)  {
+    required init(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)
     }
 
@@ -25,7 +25,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         let requestURL = NSURL(string: "http://apple.com")
         let request = NSURLRequest(URL: requestURL)
-        webView.loadRequest(request)
+       // webView.loadRequest(request)
     }
 
     func webViewDidStartLoad(webView: UIWebView) {

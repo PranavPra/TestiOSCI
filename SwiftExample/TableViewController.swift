@@ -12,12 +12,13 @@ class TableViewController: UITableViewController {
 
     var tableArray:NSMutableArray = ["Swift", "Objective -C", "Python", "Java", "Ruby"]
     
-    init(style: UITableViewStyle) {
+    override init(style: UITableViewStyle) {
         super.init(style: style)
         // Custom initialization
     }
     
-    init(coder aDecoder: NSCoder!)  {
+    
+    required init(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)
     }
 
